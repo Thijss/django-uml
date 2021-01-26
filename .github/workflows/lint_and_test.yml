@@ -1,0 +1,31 @@
+name: Lint the Code
+
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9.1
+      - name: Install Poetry
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - name: Poetry initialize & export to requirements.txt (including dev-dependencies)
+        run: |
+          source $HOME/.poetry/env
+          poetry export -f requirements.txt --output requirements.txt --dev
+      - run: pip install -r requirements.txt
+      - run: pycodestyle
+      - run: black --check .
+      - name: pylint
+        run: pylint */
+        env:
+          DATABASE_URL: sqlite:///test.sql

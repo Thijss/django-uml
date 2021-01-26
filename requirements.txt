@@ -1,0 +1,8 @@
+asgiref==3.3.1; python_version >= "3.6"
+django-environ==0.4.5
+django-extensions==3.1.0; python_version >= "3.5"
+django==3.1.5; python_version >= "3.6"
+psycopg2==2.8.6; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0")
+pygraphviz==1.6; python_version >= "3.6"
+pytz==2020.5; python_version >= "3.6"
+sqlparse==0.4.1; python_version >= "3.6"

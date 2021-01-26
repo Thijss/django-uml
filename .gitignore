@@ -1,0 +1,31 @@
+### Secrets ###
+.env
+
+### Pycharm ###
+.idea
+
+### Python ###
+__pycache__/
+
+### Virtual environments ###
+.venv
+
+### Log files ###
+*.log
+
+### SQL databases ###
+*.sql
+
+### folder for local files ###
+.local
+
+### MacOS ###
+*.DS_Store
+
+## coverage ###
+.coverage
+htmlcov
+
+## image files ##
+*.png
+
