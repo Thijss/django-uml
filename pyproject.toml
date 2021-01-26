@@ -27,7 +27,9 @@ build-backend = "poetry.core.masonry.api"
 [tool.pylint.'MASTER']
 load-plugins = "pylint_django"
 django-settings-module="config.settings.test"
-
+disable=[
+  "duplicate-code", # disabled since it detects too many false positives
+]
 [tool.coverage.report]
 omit = [
   "*/config/settings*",
