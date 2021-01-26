@@ -30,4 +30,9 @@ jobs:
       - name: pylint
         run: pylint */
         env:
-          DATABASE_URL: sqlite:///test.sql
+          DATABASE_URL: sqlite:///testdb.sql
+      - run: coverage run --source='.' manage.py test
+        env:
+          DJANGO_SETTINGS_MODULE: config.settings.test
+          DATABASE_URL: sqlite://testdb.sql
+      - run: coverage report
