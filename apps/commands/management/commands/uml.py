@@ -2,6 +2,8 @@
 from django.core.management import BaseCommand, call_command
 from django.conf import settings
 
+UML_FILE_NAME = "UML.png"
+
 
 class Command(BaseCommand):
     """This command generates a UML diagram in .png format."""
@@ -13,5 +15,5 @@ class Command(BaseCommand):
             "graph_models",
             all_applications=True,
             exclude_models="ContentType",
-            output=f"{settings.UML_EXPORTS_DIR / 'UML.png'}",
+            output=f"{settings.UML_EXPORTS_DIR / UML_FILE_NAME}",
         )
