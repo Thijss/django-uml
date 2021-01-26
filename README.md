@@ -38,7 +38,7 @@ you can follow these instructions to get started quickly:
 
     `python manage.py uml`
     
-6. You should now have a UML.png file in `.exports`
+6. You should now have a UML.png file in `.exports/`
 
 ## Example UML file
 
