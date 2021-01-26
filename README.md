@@ -18,27 +18,43 @@ you can follow these instructions to get started quickly:
 
 1. Clone the repository
 
-2. Install the requirements using either `poetry` or `pip`:
+2. Create and activate a virtualenv:
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
     
-    `poetry install`
+3. Install the requirements using either `poetry` or `pip`:
+    
+    ```bash
+    poetry install
+    ```
     
     or
     
-    `pip install -r requirements.txt`
-
-3. Copy `.env.example` to `.env` to set your environment variables:
-
-    `cp .env.example .env`
- 
-4. Run the migrations on your database:
-
-    `python manage.py migrate`
-   
-5. Run the command to generate a UML:
-
-    `python manage.py uml`
+    ```bash
+    pip install -r requirements.txt
+    ```
     
-6. You should now have a UML.png file in `.exports/`
+4. Copy `.env.example` to `.env` to set your environment variables:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+5. Run the migrations on your database:
+
+    ```bash
+    python manage.py migrate
+   ```
+
+6. Run the command to generate a UML:
+
+    ```bash
+    python manage.py uml
+    ```
+
+7. You should now have a UML.png file in `.exports/`
 
 ## Example UML.png
 
