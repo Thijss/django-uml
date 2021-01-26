@@ -17,6 +17,9 @@ Since there is an `example` app within the project,
 you can follow these instructions to get started quickly:
 
 1. Clone the repository
+    ```bash
+    git clone https://github.com/Thijss/django-uml.git <your_project_name>
+    ```
 
 2. Create and activate a virtualenv:
     ```bash
