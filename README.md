@@ -5,7 +5,7 @@ The project utilizes `django-extensions`'s `graph_model` command to generate UML
 
 
 **Note:** The project itself is not meant to run as a web application. Therefore, all files/settings
-that are normally used when setting up a web application, have been removed.
+that are normally used when setting up a Django web application, have been removed.
 
 
 ## How to use this project
@@ -40,6 +40,6 @@ you can follow these instructions to get started quickly:
     
 6. You should now have a UML.png file in `.exports/`
 
-## Example UML file
+## Example UML.png
 
 ![UML diagram](.examples/UML.png?raw=true "UML diagram")
