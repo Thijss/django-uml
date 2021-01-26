@@ -37,3 +37,9 @@ you can follow these instructions to get started quickly:
 5. Run the command to generate a UML:
 
     `python manage.py uml`
+    
+6. You should now have a UML.png file in `.exports/`
+
+## Example UML file
+
+![UML diagram](.examples/UML.png?raw=true "UML diagram")
