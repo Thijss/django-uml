@@ -26,7 +26,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pylint.'MASTER']
 load-plugins = "pylint_django"
-django-settings-module="config.settings.default"
+django-settings-module="config.settings.test"
 
 [tool.coverage.report]
 omit = [
