@@ -2,9 +2,8 @@
 name = "django-uml"
 version = "0.1.0"
 description = ""
-authors = [
-    "Thijs Baaijen <Thijss@users.noreply.github.com>",
-]
+authors = ["Thijs Baaijen <Thijss@users.noreply.github.com>"]
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
