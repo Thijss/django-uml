@@ -18,6 +18,7 @@ pylint = "^2.12.2"
 pylint-django = "^2.5.0"
 black = "^22.1.0"
 pycodestyle = "^2.8.0"
+coverage = "^6.3.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
