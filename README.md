@@ -21,7 +21,7 @@ You can install poetry from [here](https://python-poetry.org/docs/master/#instal
 Since there is an `example` app within the project, 
 you can follow these instructions to get started quickly:
 
-1. Click on the [**Use this template**] button and create your repositort
+1. Click on [**Use this template**] to create your repository
 
 1. Clone your repository
     ```bash
