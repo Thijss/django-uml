@@ -1,4 +1,5 @@
 """Django settings for project."""
+# pylint: disable=wildcard-import, unused-wildcard-import
 from ._base import *
 
 
@@ -18,6 +19,7 @@ DATABASES = {
 TIME_ZONE = "Europe/Amsterdam"
 
 # UML
+# pylint: disable=wrong-import-position
 from ._uml import *  # noqa
 GRAPH_MODELS = {
     "all_applications": False,
