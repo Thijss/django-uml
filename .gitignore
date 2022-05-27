@@ -15,6 +15,7 @@ __pycache__/
 
 ### SQL databases ###
 *.sql
+*.sqlite3
 
 ### folder for local files ###
 .local
