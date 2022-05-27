@@ -25,7 +25,7 @@ you can follow these instructions to get started quickly:
 
 1. Clone your repository
     ```bash
-    git clone https://github.com/Thijss/<your_repo_name>.git
+    git clone https://github.com/<your_github_name>/<your_repo_name>.git
     ```
     
 1. Install the requirements using `poetry` (`poetry` will create a virtualenv for you):
