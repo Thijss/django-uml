@@ -7,11 +7,11 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^4.0.2"
-django-extensions = "^3.1.5"
-django-environ = "^0.8.1"
 psycopg2 = "^2.9.3"
-pygraphviz = "^1.8"
+pygraphviz = "^1.9"
+django-extensions = "^3.1.5"
+Django = "^4.0.4"
+django-environ = "^0.8.1"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.12.2"

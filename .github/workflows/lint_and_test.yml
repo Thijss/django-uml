@@ -18,21 +18,19 @@ jobs:
           python-version: 3.9.1
       - name: Install graphviz
         run: sudo apt-get install graphviz graphviz-dev
-      - name: Install Poetry
-        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-      - name: Poetry initialize & export to requirements.txt (including dev-dependencies)
+      - name: Setup Poetry
         run: |
-          source $HOME/.poetry/env
-          poetry export -f requirements.txt --output requirements.txt --dev
-      - run: pip install -r requirements.txt
-      - run: pycodestyle
-      - run: black --check .
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+          echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+      - run: poetry install
+      - run: poetry run pycodestyle
+      - run: poetry run black --check .
       - name: pylint
-        run: pylint */
+        run: poetry run pylint */
         env:
           DATABASE_URL: sqlite:///testdb.sql
-      - run: coverage run --source='.' manage.py test
+      - run: poetry run coverage run --source='.' manage.py test
         env:
-          DJANGO_SETTINGS_MODULE: config.settings.test
+          DJANGO_SETTINGS_MODULE: settings
           DATABASE_URL: sqlite://testdb.sql
-      - run: coverage report
+      - run: poetry run coverage report
