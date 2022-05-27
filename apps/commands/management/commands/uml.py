@@ -11,9 +11,11 @@ class Command(BaseCommand):
     help = "Creates UML diagram"
 
     def handle(self, *args, **options):
+        uml_path = settings.UML_EXPORTS_DIR / UML_FILE_NAME
         call_command(
             "graph_models",
             all_applications=True,
             exclude_models="ContentType",
-            output=f"{settings.UML_EXPORTS_DIR / UML_FILE_NAME}",
+            output=f"{uml_path}",
         )
+        self.stdout.write(self.style.SUCCESS(f"Created {uml_path}"))
