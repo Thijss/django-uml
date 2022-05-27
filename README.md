@@ -13,9 +13,16 @@ that are normally used when setting up a Django web application, have been remov
 2. Run `python manage.py uml` to generate a PNG-file depicting your UML diagram.
 
 ## Prerequisites
-This project expects the user to have `poetry` installed, to install it's requirements.
 
+### Poetry
+This project expects the user to have `poetry` installed, to install it's requirements.
 You can install poetry from [here](https://python-poetry.org/docs/master/#installation)
+
+### Graphviz
+To create uml diagrams, the `graphviz` system packages are required. On Linux these can be installed with:
+```bash
+sudo apt-get install graphviz graphviz-dev
+```
 
 ## Quickstart
 Since there is an `example` app within the project, 
@@ -40,16 +47,10 @@ you can follow these instructions to get started quickly:
     cp .env.example .env
     ```
 
-1. Run the migrations on your database:
-
-    ```bash
-    python manage.py migrate
-   ```
-
 1. Run the command to generate a UML:
 
     ```bash
-    python manage.py uml
+    poetry run python manage.py uml
     ```
 
 1. You should now have a UML.png file in `.exports/`
