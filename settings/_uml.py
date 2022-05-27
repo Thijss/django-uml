@@ -1,3 +1,5 @@
+"""Setting that enable `python manage.py uml` command"""
+# pylint: disable=wildcard-import, unused-wildcard-import
 from ._base import *
 
 _INSTALLED_APPS_SET = set(INSTALLED_APPS).union({
