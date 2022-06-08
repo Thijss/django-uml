@@ -21,6 +21,7 @@ TIME_ZONE = "Europe/Amsterdam"
 # UML
 # pylint: disable=wrong-import-position
 from ._uml import *  # noqa
+
 GRAPH_MODELS = {
     "all_applications": False,
     "group_models": True,
